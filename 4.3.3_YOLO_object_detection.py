@@ -6,14 +6,7 @@ import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
 def main():
-    """
-    A simple end-to-end script that:
-      1) (Optionally) trains a YOLOv8 model on a custom dataset.
-      2) (Optionally) evaluates the model on a validation set.
-      3) Runs inference on raw images to detect the box & snap-fit.
-      4) Saves all results in /roboticsvision/step1outcome/.
-      5) Creates additional visualizations for the dissertation.
-    """
+
     # 1. CONFIGURATION
     train_model = True
     validate_model = True
@@ -42,7 +35,7 @@ def main():
     # Directory for additional visualizations for the dissertation
     viz_dir = "C:/Users/Peter Zeng/Desktop/morevisualizations/yolodata/morevisualizations/"
     
-    # Create necessary output folders if they don't exist
+    # Create output folders
     os.makedirs(model_output_dir, exist_ok=True)
     os.makedirs(inference_results_dir, exist_ok=True)
     os.makedirs(evaluation_dir, exist_ok=True)
